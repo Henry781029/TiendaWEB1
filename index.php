@@ -23,28 +23,28 @@
       
 <div class="row">
   <div class="col-6">      
-    <form class="mt-5" action="" method="">
+    <form class="mt-5" action="Enlace.php" method="POST">
       <div class="form-group row">
         <label for="" class="col-2 col-form-label">NOMBRE</label>
-        <input type="text" placeholder="Nompre producto" class="form-control col-10">
+        <input type="text" placeholder="Nompre producto" class="form-control col-10" name="nombre">
       </div>
       <div class="form-group row">
         <label for=""class="col-2 col-form-label">MARCA</label>
-        <input type="text" placeholder="Marca Producto" class="form-control col-10">
+        <input type="text" placeholder="Marca Producto" class="form-control col-10" name="marca">
       </div>
       <div class="form-group row">
         <label for="" class="col-2 col-form-label">PRECIO</label>
-        <input type="text" placeholder="Ingrese Precio" class="form-control col-10">
+        <input type="text" placeholder="Ingrese Precio" class="form-control col-10" name="precio">
       </div>
       <div class="form-group row">
         <label for="" class="col-2 col-form-label">DESCRIPCION</label>
-        <input type="text" placeholder="Descripcion del producto" class="form-control col-10">
+        <input type="text" placeholder="Descripcion del producto" class="form-control col-10" name="descripcion">
       </div>
       <div class="form-group row">
-        <button class="btn btn-danger mt-5 col-12">Registrar</button>  
+        <button class="btn btn-danger mt-5 col-12" name="btnRegistrar">Registrar</button>  
       </div>
       <div class="form-group row">
-        <button class="btn btn-danger mt-4 col-12">Carrito</button>  
+        <button class="btn btn-danger mt-4 col-12" name="btnCarrito">Carrito</button>  
       </div>
     </form>
   </div>
