@@ -1,5 +1,8 @@
 <?php
 
+include("Carrito.php");
+
+
 if(isset($_POST["btnRegistrar"]))
 {
     $nombre=$_POST["nombre"];
@@ -7,8 +10,9 @@ if(isset($_POST["btnRegistrar"]))
     $precio=$_POST["precio"];
     $descripcion=$_POST["descripcion"];
 
-    echo($precio);
-    echo($descripcion);
+    $comprobacion= new Carrito();
+
+    $comprobacion->conectarCarrito();
 
 
 }
