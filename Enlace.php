@@ -11,9 +11,10 @@ if(isset($_POST["btnRegistrar"]))
     $descripcion=$_POST["descripcion"];
 
     $comprobacion= new Carrito();
-
-    $comprobacion->conectarCarrito();
-
+    
+    $consultaSQL="INSERT INTO productos(id,Producto,Marca,Precio,Descripción) VALUES ('$nombre','$marca','$precio','$descripcion')";
+    
+    $comprobacion->agregarDatos($consultaSQL);
 
 }
 

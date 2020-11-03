@@ -9,14 +9,35 @@ class Carrito
 
     public function conectarCarrito()
     {
-        $datosCarrito="mysql:host=localhost;dbname=tiendamariana";
 
-        $conexionCarrito= new PDO($datosCarrito,$this->usuarioCarrito,$this->passwordCarrito);
+        try
+        {
 
-        if($conexionCarrito){
-            echo("exito");
+            $datosCarrito="mysql:host=localhost;dbname=tiendamariana";
+            $conexionCarrito= new PDO($datosCarrito,$this->usuarioCarrito,$this->passwordCarrito);
+            return($conexionCarrito);
+
+        }
+        catch(PDOException $error)
+        {
+            echo($error->getMessage());
+        }
+
+    }
+
+    public function agregarDatos($consultaSQL)
+    {
+
+        $conexionCarrito=$this->conectarCarrito();
+
+        $insertarDatos=$conexionCarrito->prepare($consultaSQL);
+
+        $resultados=$insertarDatos->execute();
+
+        if($resultados){
+            echo("usuario Agregado");
         }else{
-            echo("ERROR");
+            echo("error");
         }
 
     }
