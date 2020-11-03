@@ -37,7 +37,7 @@ class Carrito
         if($resultados){
             echo("usuario Agregado");
         }else{
-            echo("error");
+            echo("ERROR");
         }
 
     }
