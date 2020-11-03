@@ -43,6 +43,9 @@
       <div class="form-group row">
         <button class="btn btn-danger mt-5 col-12">Registrar</button>  
       </div>
+      <div class="form-group row">
+        <button class="btn btn-danger mt-4 col-12">Carrito</button>  
+      </div>
     </form>
   </div>
 </div>
