@@ -13,7 +13,7 @@
     <header>
       <div>
         <img src="img/niñadulce.png" width="50" height="50" alt="imagen1">
-        <h1>Tienda de Mariana</h1>
+        <h1>Tienda de dulces de MARIANA</h1>
 
       </div>
     
@@ -21,29 +21,31 @@
 
     <main>
       
-<form class="mt-5" action="" method="">
-  <div class="form-group">
-    <label for="">NOMBRE</label>
-    <input type="text" placeholder="Nompre producto" class="form-control">
+<div class="row">
+  <div class="col-6">      
+    <form class="mt-5" action="" method="">
+      <div class="form-group row">
+        <label for="" class="col-2 col-form-label">NOMBRE</label>
+        <input type="text" placeholder="Nompre producto" class="form-control col-10">
+      </div>
+      <div class="form-group row">
+        <label for=""class="col-2 col-form-label">MARCA</label>
+        <input type="text" placeholder="Marca Producto" class="form-control col-10">
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-2 col-form-label">PRECIO</label>
+        <input type="text" placeholder="Ingrese Precio" class="form-control col-10">
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-2 col-form-label">DESCRIPCION</label>
+        <input type="text" placeholder="Descripcion del producto" class="form-control col-10">
+      </div>
+      <div class="form-group row">
+        <button class="btn btn-danger mt-5 col-12">Registrar</button>  
+      </div>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="">MARCA</label>
-    <input type="text" placeholder="Marca Producto" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="">PRECIO</label>
-    <input type="text" placeholder="Ingrese Precio" class="form-control">
-  </div>
-  <div class="form-group">
-    <label for="">DESCRIPCION</label>
-    <input type="text" placeholder="Descripcion del producto" class="form-control">
-  </div>
-  <div class="form-group">
-    <button class="btn btn-danger mt-5">Registrar</button>  
-  </div>
-  
-
-</form>
+</div>
 
     
     </main>
