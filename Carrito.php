@@ -35,7 +35,7 @@ class Carrito
         $resultados=$insertarDatos->execute();
 
         if($resultados){
-            echo("usuario Agregado");
+            echo("PRODUCTO AGREGADO");
         }else{
             echo("ERROR");
         }
