@@ -44,7 +44,7 @@
         <button class="btn btn-danger mt-5 col-12" name="btnRegistrar">Registrar</button>  
       </div>
       <div class="form-group row">
-        <button class="btn btn-danger mt-4 col-12" name="btnCarrito">Carrito</button>  
+        <button class="btn btn-danger mt-4 col-12" name="btnFichas">Fichas</button>  
       </div>
     </form>
   </div>

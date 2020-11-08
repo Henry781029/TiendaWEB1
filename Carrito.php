@@ -42,6 +42,37 @@ class Carrito
 
     }
 
+    public function consultarDatos($consultaSQL)
+    {
+
+        $conexionCarrito=$this->conectarCarrito();
+
+        $consultarDatos=$conexionCarrito->prepare($consultaSQL);
+
+        $consultarDatos->setFetchMode(PDO::FETCH_ASSOC);
+
+        $resultados=$consultarDatos->execute();
+        return($consultarDatos->fetchAll());
+
+    }
+
+    public function eliminarDatos($consultaSQL)
+    {
+
+        $conexionCarrito=$this->conectarCarrito();
+
+        $eliminarDatos=$conexionCarrito->prepare($consultaSQL);
+
+        $resultados=$eliminarDatos->execute();
+
+        if($resultados){
+            echo("PRODUCTO ELIMINADO");
+        }else{
+            echo("ERROR");
+        }
+
+    }
+
 }
 
 
