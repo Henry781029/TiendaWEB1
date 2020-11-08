@@ -18,10 +18,4 @@ if(isset($_POST["btnRegistrar"]))
 
 }
 
-
-
-
-
-
-
 ?>
