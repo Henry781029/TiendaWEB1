@@ -37,11 +37,11 @@ $usuarios=$verificacion->consultarDatos($consultaSQL);
         <?php foreach($usuarios as $usuario): ?>
         <div class="col-3">
             <div class="card">
-                <img class="card-img-top" src="" alt="imagenCard1">
+                <img class="card-img-top" src="<?php echo($usuario["Imagenes"])  ?>" alt="imagenes">
                 <div class="card-body">
-                    <h2 class="card-title"><?php echo($usuario["Producto"]) ?></h2>
-                    <h3 class="card-title"><?php echo($usuario["Marca"])  ?></h3>
-                    <h4 class="card-title"><?php echo($usuario["Precio"])  ?></h4>
+                    <h3 class="card-title"><?php echo($usuario["Producto"]) ?></h3>
+                    <h4 class="card-title"><?php echo($usuario["Marca"])  ?></h4>
+                    <h4 class="card-title"><?php echo("$".$usuario["Precio"])  ?></h4>
                     <p class="card-text"><?php echo($usuario["Descripción"])  ?></p>
                     <a href="" class="btn btn-warning">EDITAR</a>
                     <a href="eliminarDatos.php?id= <?php echo($usuario['id']) ?> " class="btn btn-danger">ELIMINAR</a>
