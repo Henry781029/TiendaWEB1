@@ -26,7 +26,7 @@
     <form class="mt-5" action="Enlace.php" method="POST">
       <div class="form-group row">
         <label for="" class="col-2 col-form-label">NOMBRE</label>
-        <input type="text" placeholder="Nompre Producto" class="form-control col-10" name="producto">
+        <input type="text" placeholder="Nombre Producto" class="form-control col-10" name="producto">
       </div>
       <div class="form-group row">
         <label for=""class="col-2 col-form-label">MARCA</label>

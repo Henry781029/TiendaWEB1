@@ -36,6 +36,7 @@ $usuarios=$verificacion->consultarDatos($consultaSQL);
 
         <?php foreach($usuarios as $usuario): ?>
         <div class="col-3">
+
             <div class="card">
                 <img class="card-img-top" src="<?php echo($usuario["Imagenes"])  ?>" alt="imagenes">
                 <div class="card-body">
@@ -43,10 +44,37 @@ $usuarios=$verificacion->consultarDatos($consultaSQL);
                     <h4 class="card-title"><?php echo($usuario["Marca"])  ?></h4>
                     <h4 class="card-title"><?php echo("$".$usuario["Precio"])  ?></h4>
                     <p class="card-text"><?php echo($usuario["Descripción"])  ?></p>
-                    <a href="" class="btn btn-warning">EDITAR</a>
+                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#editar<?php  echo($usuario["id"])?>">EDITAR</button>
                     <a href="eliminarDatos.php?id= <?php echo($usuario['id']) ?> " class="btn btn-danger">ELIMINAR</a>
                 </div>
             </div>
+
+            <div class="modal fade" id="editar<?php  echo($usuario["id"])?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">EDITAR DATOS</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <form action="editarDatos.php?id=<?php echo ($usuario["id"]) ?>" method="POST">
+                            <div class="modal-body">
+                                <input type="text" placeholder="Renombrar Producto" class="form-control col-10" name="productoEditar" value="<?php echo($usuario["producto"])?>">
+                                <input type="text" placeholder="Nuevo Precio" class="form-control col-10" name="precioEditar" value="<?php  echo($usuario["precio"])?>">
+                                <input type="text" placeholder="Nueva URL IMAGEN" class="form-control col-10" name="imagenesEditar" value="<?php  echo($usuario["imagenes"])?>">
+                                <textarea class="form-control col-10" placeholder="Nueva descripcion" rows="10" name="descripcionEditar"><?php  echo($usuario['descripcion'])?></textarea>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" name="atras">Atras</button>
+                                <button type="submit" class="btn btn-warning" name="btnCambios">Efectuar Cambios</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>    
+            </div>
+
         </div>
         <?php endforeach ?>
 
