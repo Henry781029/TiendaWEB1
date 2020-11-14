@@ -26,7 +26,7 @@
     <form class="mt-5" action="Enlace.php" method="POST">
       <div class="form-group row">
         <label for="" class="col-2 col-form-label">NOMBRE</label>
-        <input type="text" placeholder="Nompre producto" class="form-control col-10" name="producto">
+        <input type="text" placeholder="Nompre Producto" class="form-control col-10" name="producto">
       </div>
       <div class="form-group row">
         <label for=""class="col-2 col-form-label">MARCA</label>
@@ -38,7 +38,11 @@
       </div>
       <div class="form-group row">
         <label for="" class="col-2 col-form-label">DESCRIPCION</label>
-        <input type="text" placeholder="Descripcion del producto" class="form-control col-10" name="descripcion">
+        <textarea class="form-control col-10" placeholder="Descripcion del Producto" rows="10" name="descripcion"></textarea>
+      </div>
+      <div class="form-group row">
+        <label for="" class="col-2 col-form-label">IMAGENES</label>
+        <input type="text" placeholder="URL IMAGEN" class="form-control col-10" name="imagenes">
       </div>
       <div class="form-group row">
         <button class="btn btn-danger mt-5 col-12" name="btnRegistrar">Registrar</button>  
