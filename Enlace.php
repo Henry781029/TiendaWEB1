@@ -17,6 +17,8 @@ if(isset($_POST["btnRegistrar"]))
     
     $comprobacion->agregarDatos($consultaSQL);
 
+    header("location:index.php");
+
 }
 
 ?>
