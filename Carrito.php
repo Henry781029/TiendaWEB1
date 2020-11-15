@@ -73,6 +73,23 @@ class Carrito
 
     }
 
+    public function editarDatos($consultaSQL)
+    {
+
+        $conexionCarrito=$this->conectarCarrito();
+
+        $editarDatos=$conexionCarrito->prepare($consultaSQL);
+
+        $resultados=$editarDatos->execute();
+
+        if($resultados){
+            echo("PRODUCTO EDITADO");
+        }else{
+            echo("ERROR");
+        }
+
+    }
+
 }
 
 

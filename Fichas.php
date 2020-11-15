@@ -61,10 +61,14 @@ $usuarios=$verificacion->consultarDatos($consultaSQL);
                         </div>
                         <form action="editarDatos.php?id=<?php echo ($usuario["id"]) ?>" method="POST">
                             <div class="modal-body">
-                                <input type="text" placeholder="Renombrar Producto" class="form-control col-10" name="productoEditar" value="<?php echo($usuario["producto"])?>">
-                                <input type="text" placeholder="Nuevo Precio" class="form-control col-10" name="precioEditar" value="<?php  echo($usuario["precio"])?>">
-                                <input type="text" placeholder="Nueva URL IMAGEN" class="form-control col-10" name="imagenesEditar" value="<?php  echo($usuario["imagenes"])?>">
-                                <textarea class="form-control col-10" placeholder="Nueva descripcion" rows="10" name="descripcionEditar"><?php  echo($usuario['descripcion'])?></textarea>
+                                <label for="" class="col-2 col-form-label">Producto:</label>
+                                <input type="text" class="form-control col-10" name="productoEditar" value="<?php echo($usuario["Producto"])?>">
+                                <label for="" class="col-2 col-form-label">Precio:</label>
+                                <input type="text" class="form-control col-10" name="precioEditar" value="<?php  echo($usuario["Precio"])?>">
+                                <label for="" class="col-2 col-form-label">Descripción:</label>
+                                <textarea class="form-control col-10" rows="10" name="descripcionEditar"><?php  echo($usuario["Descripción"])?></textarea>
+                                <label for="" class="col-2 col-form-label">URL:</label>
+                                <input type="text" class="form-control col-10" name="imagenesEditar" value="<?php  echo($usuario["Imagenes"])?>">  
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" name="atras">Atras</button>

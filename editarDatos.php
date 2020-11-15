@@ -4,12 +4,22 @@ include ("Carrito.php");
 
 $edicion= new Carrito();
 
-$idEditar=$_GET["id"];
+if(isset($_POST["btnCambios"]))
+{
 
-echo ($idEditar);
+    $idEditar=$_GET["id"];
+
+    $nombre=$_POST["productoEditar"];
+    $precio=$_POST["precioEditar"];
+    $imagen=$_POST["imagenesEditar"];
+    $descripcion=$_POST["descripcionEditar"];
+
+    $consultaSQL="UPDATE productos SET Producto='$nombre',Precio='$precio',Descripción='$descripcion',Imagenes='$imagen' WHERE id='$idEditar'";
+
+    $edicion->editarDatos($consultaSQL);
 
 
-
+}
 
 
 ?>
