@@ -85,6 +85,10 @@ $usuarios=$verificacion->consultarDatos($consultaSQL);
     </div>
 </div>
 
+<div class="form-group row" >
+    <a href="index.php" class="btn btn-danger mt-4 col-12" >Reresar a la Tienda...</a>  
+</div>
+
 </main>
 
 
