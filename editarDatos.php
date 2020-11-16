@@ -18,6 +18,8 @@ if(isset($_POST["btnCambios"]))
 
     $edicion->editarDatos($consultaSQL);
 
+    header("location:Fichas.php");
+
 
 }
 

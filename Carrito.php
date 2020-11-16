@@ -81,13 +81,13 @@ class Carrito
         $editarDatos=$conexionCarrito->prepare($consultaSQL);
 
         $resultados=$editarDatos->execute();
-
+        
         if($resultados){
             echo("PRODUCTO EDITADO");
         }else{
             echo("ERROR");
         }
-
+        
     }
 
 }
